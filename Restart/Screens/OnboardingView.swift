@@ -70,7 +70,6 @@ struct OnboardingView: View {
                         Capsule()
                             .fill(Color("ColorRed"))
                             .frame(width: buttonOffset + 80)
-
                         Spacer()
                     } //: HSTACK
 
