@@ -8,9 +8,18 @@
 import SwiftUI
 
 struct ContentView: View {
+    /// AppStorage - property wrapper that will use the users defauls. The pirpose is to store a value on the device´s permanent storage
+    /// "onboarding" - user defaults key
+    @AppStorage("onboarding") var isOnboardingViewActive: Bool = true
+    
     var body: some View {
-        Text("Hello, world!")
-            .padding()
+        ZStack {
+            if isOnboardingViewActive {
+                OnboardingView()
+            } else {
+                HomeView()
+            }
+        }
     }
 }
 
